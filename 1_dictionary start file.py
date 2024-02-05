@@ -4,7 +4,7 @@ phonebook = {'Chris':'555−1111',
              'Katie':'555−2222',
              'Joanne':'555−3333'}
 
-
+'''
 
 print()
 print('*****  start section 1 - print dictionary ********')
@@ -18,17 +18,31 @@ print()
 print('*****  end section 1 ********')
 print()
 
+print(phonebook)
+print(len(phonebook))
 
-'''
+print(phonebook['Chris'])       #case sensitive
+
+
+my_dictionary = {}      #this will create an empty dictionary
+
+my_dictionary2 = dict(m=8, n=9)     # m and n are keys and 8 and 9 are their corresponding values
+
+print(my_dictionary2)
+
+
 
 
 print()
 print('*****  start section 2 - search dictionary ********')
 print()
 
+name = 'Chris'
 
-
-
+if name in phonebook:
+    print(f"Name {name} Phone Number: {phonebook[name]}")
+else:
+    print(f"{name} is not in the phone book")
 
 
 
@@ -46,6 +60,12 @@ print()
 print('*****  start section 3 - edit/append dictionary ********')
 print()
 
+print(phonebook)
+
+phonebook['Joe'] = '555-0123'       #this will add a new key value pair (because joe doesnt exist in the dictionary)
+phonebook['Chris'] = '555-4444'     #this will update the value of the key (because chris already exists)
+
+print(phonebook)
 
 
 
@@ -63,14 +83,18 @@ print()
 print('*****  start section 4 - delete/remove from dictionary ********')
 print()
 
+print(phonebook)
 
+del phonebook['Chris']
+
+print(phonebook)
 
 
 print()
 print('*****  end section 4 ********')
 print()
 
-
+'''
 
 
 
@@ -80,7 +104,11 @@ print('*****  start section 5 - iterate through keys, values, items ********')
 print()
 
 
+for key in phonebook:       #key in this line can be any word
+    print(f" The key is {key} and the value is {phonebook[key]}")
 
+for value in phonebook.values:      #.values itterates through the values
+    print(value)
 
 
 
@@ -89,7 +117,7 @@ print('*****  end section 5 ********')
 print()
 
 
-
+'''
 
 
 print()
