@@ -94,7 +94,7 @@ print()
 print('*****  end section 4 ********')
 print()
 
-'''
+
 
 
 
@@ -110,23 +110,30 @@ for key in phonebook:       #key in this line can be any word
 for value in phonebook.values:      #.values itterates through the values
     print(value)
 
+for k,v in phonebook.items():                           #k,v is a str
+    print(f"The key is {k} and the value is {v}")
 
+for items in phonebook.items():                         #items is a tuple
+    print(items)
+    #print(f"The key is {k} and the value is {v}")
 
 print()
 print('*****  end section 5 ********')
 print()
 
 
-'''
+
 
 
 print()
 print('*****  start section 6 - using get and clear ********')
 print()
 
+phone = phonebook.get('Chris', '555-5555')
+print(phone)
 
-
-
+phonebook.clear()       #left with an empty dictionary ...= {}
+print(phonebook)
 
 
 print()
@@ -139,9 +146,9 @@ print()
 print('*****  start section 7 - using pop method ********')
 print()
 
-
-
-
+print(phonebook)
+remove = phonebook.pop('Chris', 'not found')        #only works on keys ('Chris')
+print(remove)
 
 
 print()
@@ -154,7 +161,11 @@ print()
 print('*****  start section 8 - using popitem ********')
 print()
 
+#this is not working bc it just keeps deleting the last one (Joanne)... this is bc python isnt working so the next section is what were supposed to do
 
+a = phonebook.popitem()     #no arguments bc it should print random one
+print(a)
+print(phonebook)
 
 
 
@@ -163,22 +174,28 @@ print()
 print('*****  end section 8 ********')
 print()
 
-
+'''
 
 print()
 print('*****  start section 9 - using random and converting to list ********')
 print()
 
 
+list_of_keys = list(phonebook)
+print(list_of_keys)
+random_key = random.choice(list_of_keys)        #random.choice only applies to lists
+print(random_key)                               #gives us a random person
+print(phonebook[random_key])                    #gives us the corresponding phone number for the random person
 
-
+#this is how to write it all in one line of code
+print(phonebook[random.choice(list(phonebook))]) 
 
 print()
 print('*****  end section 9 ********')
 print()
 
 
-'''
+
 
 
 
