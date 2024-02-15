@@ -13,12 +13,12 @@ def main():
 
 def recommend_movie(movie_rating, ux_movie):
     if ux_movie in movie_rating and movie_rating[ux_movie] >= 8:
-        print(f">>> {ux_movie} is recommended!! This movie has a rating of {movie_rating[ux_movie]}.\n")
+        print(f">>> The movie {ux_movie} is recommended!! Rating of: {movie_rating[ux_movie]}/10.\n")
     else:
         print()
         print("Movie Recommendations:")
         for movie, rating in movie_rating.items():
-            if rating <= 8:
-                print(f"{movie} has a rating of {rating}.")
+            if rating >= 8:
+                print(f"{movie} has a rating of {rating}/10.")
 
 main()
