@@ -11,15 +11,16 @@
 #Write a loop to iterate over the key-value pairs in the student dictionary and print each pair on a new line in a well formatted way.
 
 #create dictionary student
-student = {"name": "Leah Nelson", "age": 20, "major": "Marketing & MIS", "hobbies": "Running, reading and hiking."}
+student = {"Name": "Leah Nelson", "Age": 20, "Major": "Marketing & MIS", "Hobbies": "Running, reading and hiking."}
 
 #Add a new key-value pair for "State": Your State of Residence
-student["State"] = ["Minnesota"]
+student["State"] = "Minnesota"
 
 #Update the "age" to your current age + 1
-student["age"] + 1
+student["Age"] += 1
 
-#loop to iterate
-for items in student.items():                         #items is a tuple
-    print(items)
-    #print(f"The key is {k} and the value is {v}")
+#Loop and print student information
+print("\nSTUDENT INFORMATION:")
+print('-' *20)
+for key, value in student.items():
+    print(f"{key}: {value}")
