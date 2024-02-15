@@ -10,9 +10,26 @@ Copy that info here:
 "NCAA/NAIA conference number football (IC2020)","130","Southeastern Conference"
 
 
-Display report for all universities that have a graduation rate for Women over 50%
+Display report for all universities that have a graduation rate for Women over 75%
 Display report for all universities that have a total price for in-state students living off campus over $50,000
 
 
 
 """
+
+
+import json
+
+infile = open('school_data.json', 'r')
+
+#convert json to python
+list_of_schools = json.load(infile)
+
+print(type(list_of_schools))
+
+conference_schools = [372, 108, 107, 130]
+
+for school in list_of_schools:
+    if [school]["NCAA"]["NAIA conference number football (IC2020)"] in conference_schools:
+        if grad_rate_ref >= 0.75:
+            print("University: ", uni_name)

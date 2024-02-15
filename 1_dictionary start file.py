@@ -4,7 +4,7 @@ phonebook = {'Chris':'555−1111',
              'Katie':'555−2222',
              'Joanne':'555−3333'}
 
-'''
+
 
 print()
 print('*****  start section 1 - print dictionary ********')
@@ -107,7 +107,7 @@ print()
 for key in phonebook:       #key in this line can be any word
     print(f" The key is {key} and the value is {phonebook[key]}")
 
-for value in phonebook.values:      #.values itterates through the values
+for value in phonebook.values():      #.values itterates through the values
     print(value)
 
 for k,v in phonebook.items():                           #k,v is a str
@@ -174,7 +174,7 @@ print()
 print('*****  end section 8 ********')
 print()
 
-'''
+
 
 print()
 print('*****  start section 9 - using random and converting to list ********')

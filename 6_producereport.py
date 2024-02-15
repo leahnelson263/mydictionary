@@ -207,3 +207,26 @@ ProduceDictionary={
     }
 }
 
+#print(ProduceDictionary['Bok choy']['cost'])
+
+
+
+#calculate the total
+for key in ProduceDictionary:
+    cost_times_amt = (ProduceDictionary[key]["cost"]) * (ProduceDictionary[key]["amt_sold"])
+    cost_times_amt = round(cost_times_amt,2)
+    stated_total = ProduceDictionary[key]["total"]
+    if cost_times_amt != stated_total:
+        print()
+        print(f"Produce Name:  {key}")
+        print(f"Actual Total: ", cost_times_amt)
+        print(f"Stated Total: ", stated_total)
+
+        
+
+#for key in ProduceDictionary:
+    #print(f"Produce Name: {key}")
+    #cost_times_amt = [key]["cost"] * [key]["amt_sold"]
+    #cost_difference = cost_times_amt - {key}["total"]
+    #print(cost_difference)
+
