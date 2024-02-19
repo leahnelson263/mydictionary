@@ -11,7 +11,7 @@ print('*****  start section 1 - print dictionary ********')
 print()
 
 
-
+print(phonebook)
 
 
 print()
